@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { HiCalendar, HiLocationMarker, HiClock, HiUsers, HiArrowRight, HiStar } from 'react-icons/hi';

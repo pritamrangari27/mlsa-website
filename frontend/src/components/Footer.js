@@ -4,8 +4,7 @@ import { motion } from 'framer-motion';
 import { 
   HiLocationMarker, 
   HiMail, 
-  HiPhone,
-  HiHeart
+  HiPhone
 } from 'react-icons/hi';
 import { 
   FaLinkedin, 
@@ -75,11 +74,11 @@ const Footer = () => {
               </div>
               <div className="contact-item">
                 <HiMail />
-                <a href="mailto:mlsa@aissms.in">mlsa@aissms.in</a>
+                <a href="mailto:ioitmlsa@gmail.com">ioitmlsa@gmail.com</a>
               </div>
               <div className="contact-item">
                 <HiPhone />
-                <a href="tel:+919876543210">+91 98765 43210</a>
+                <a href="tel:+917385668637">+91 73856 68637</a>
               </div>
             </div>
           </div>
@@ -132,21 +131,6 @@ const Footer = () => {
                   <social.icon />
                 </motion.a>
               ))}
-            </div>
-
-            <div className="footer-newsletter">
-              <h5>Stay Updated</h5>
-              <p>Subscribe to our newsletter for the latest updates.</p>
-              <form className="newsletter-form" onSubmit={(e) => e.preventDefault()}>
-                <input 
-                  type="email" 
-                  placeholder="Enter your email" 
-                  aria-label="Email for newsletter"
-                />
-                <button type="submit" className="btn btn-primary">
-                  Subscribe
-                </button>
-              </form>
             </div>
           </div>
         </div>

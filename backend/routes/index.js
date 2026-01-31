@@ -1,6 +1,65 @@
 const express = require('express');
 const router = express.Router();
 const { body, validationResult } = require('express-validator');
+const nodemailer = require('nodemailer');
+
+// Email transporter configuration
+const transporter = nodemailer.createTransport({
+  host: process.env.EMAIL_HOST || 'smtp.gmail.com',
+  port: parseInt(process.env.EMAIL_PORT) || 587,
+  secure: false, // true for 465, false for other ports
+  auth: {
+    user: process.env.EMAIL_USER,
+    pass: process.env.EMAIL_PASS,
+  },
+});
+
+// Function to send contact email
+const sendContactEmail = async (contactData) => {
+  const { name, email, subject, message } = contactData;
+  
+  const mailOptions = {
+    from: `"MLSA Website Contact" <${process.env.EMAIL_USER}>`,
+    to: process.env.CONTACT_EMAIL || 'ioitmlsa@gmail.com',
+    replyTo: email,
+    subject: `[MLSA Contact] ${subject}`,
+    html: `
+      <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
+        <div style="background: linear-gradient(135deg, #0078D4, #00BCF2); padding: 20px; text-align: center;">
+          <h1 style="color: white; margin: 0;">New Contact Form Submission</h1>
+        </div>
+        <div style="padding: 30px; background: #f9f9f9;">
+          <h2 style="color: #333; border-bottom: 2px solid #0078D4; padding-bottom: 10px;">Contact Details</h2>
+          <table style="width: 100%; border-collapse: collapse;">
+            <tr>
+              <td style="padding: 10px 0; font-weight: bold; color: #555;">Name:</td>
+              <td style="padding: 10px 0; color: #333;">${name}</td>
+            </tr>
+            <tr>
+              <td style="padding: 10px 0; font-weight: bold; color: #555;">Email:</td>
+              <td style="padding: 10px 0; color: #333;"><a href="mailto:${email}">${email}</a></td>
+            </tr>
+            <tr>
+              <td style="padding: 10px 0; font-weight: bold; color: #555;">Subject:</td>
+              <td style="padding: 10px 0; color: #333;">${subject}</td>
+            </tr>
+          </table>
+          <h3 style="color: #333; margin-top: 20px;">Message:</h3>
+          <div style="background: white; padding: 15px; border-radius: 5px; border-left: 4px solid #0078D4;">
+            <p style="color: #333; line-height: 1.6; margin: 0;">${message.replace(/\n/g, '<br>')}</p>
+          </div>
+        </div>
+        <div style="background: #333; padding: 15px; text-align: center;">
+          <p style="color: #999; margin: 0; font-size: 12px;">
+            This email was sent from the MLSA AISSMS IOIT website contact form.
+          </p>
+        </div>
+      </div>
+    `,
+  };
+
+  return transporter.sendMail(mailOptions);
+};
 
 // Mock data for the MLSA website
 const teamMembers = [
@@ -380,24 +439,37 @@ router.post('/contact', [
   body('email').isEmail().normalizeEmail().withMessage('Invalid email address'),
   body('subject').trim().isLength({ min: 5 }).withMessage('Subject must be at least 5 characters'),
   body('message').trim().isLength({ min: 10 }).withMessage('Message must be at least 10 characters')
-], (req, res) => {
+], async (req, res) => {
   const errors = validationResult(req);
   if (!errors.isEmpty()) {
     return res.status(400).json({ success: false, errors: errors.array() });
   }
 
-  // In production, send email using nodemailer
   const contact = {
     id: Date.now(),
     ...req.body,
     submittedAt: new Date().toISOString()
   };
 
-  res.status(201).json({
-    success: true,
-    message: 'Thank you for reaching out! We\'ll get back to you soon.',
-    data: contact
-  });
+  try {
+    // Send email notification
+    await sendContactEmail(req.body);
+    console.log(`✉️ Contact email sent from ${req.body.email}`);
+    
+    res.status(201).json({
+      success: true,
+      message: 'Thank you for reaching out! We\'ll get back to you soon.',
+      data: contact
+    });
+  } catch (emailError) {
+    console.error('Failed to send contact email:', emailError.message);
+    // Still return success to user but log the error
+    res.status(201).json({
+      success: true,
+      message: 'Thank you for reaching out! We\'ll get back to you soon.',
+      data: contact
+    });
+  }
 });
 
 // Event registration
