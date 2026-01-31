@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MLSA AISSMS IOIT Website
 
 A professional, hackathon-quality website for the Microsoft Learn Student Ambassador Club at AISSMS IOIT, Pune.
@@ -231,3 +232,7 @@ Built with ❤️ by the MLSA Team at AISSMS IOIT, Pune
 ---
 
 **Microsoft Learn Student Ambassadors** - Empowering students through technology
+=======
+# mlsa-website
+This repo is releted to MLSA Club Aissms Ioit, Pune.
+>>>>>>> bcbcbf8f724c2881c857c548c4c1a8d31135dda2
