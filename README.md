@@ -227,12 +227,11 @@ This project is licensed under the MIT License.
 
 ## 👥 Team
 
-Built with ❤️ by the MLSA Team at AISSMS IOIT, Pune
+Built by Pritam Rangari & Teams.
 
 ---
 
 **Microsoft Learn Student Ambassadors** - Empowering students through technology
 =======
 # mlsa-website
-This repo is releted to MLSA Club Aissms Ioit, Pune.
->>>>>>> bcbcbf8f724c2881c857c548c4c1a8d31135dda2
+https://mlsa-ioit.vercel.app/
