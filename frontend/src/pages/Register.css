@@ -1,0 +1,268 @@
+.register-page {
+  padding-top: 80px;
+}
+
+.register-hero {
+  position: relative;
+  padding: 80px 0;
+  overflow: hidden;
+}
+
+.register-hero .hero-gradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, var(--ms-orange) 0%, #0078d4 100%);
+}
+
+.register-hero .hero-pattern {
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.register-hero-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.register-hero-content h1 {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 800;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.register-hero-content p {
+  font-size: 1.125rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Registration Section */
+.register-section {
+  background: var(--bg-secondary);
+}
+
+.register-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+/* Benefits */
+.register-info h2 {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 2rem;
+}
+
+.benefits-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.benefits-list li {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.benefits-list svg {
+  flex-shrink: 0;
+  color: var(--ms-blue);
+  font-size: 1.5rem;
+  margin-top: 0.25rem;
+}
+
+.benefits-list h4 {
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+}
+
+.benefits-list p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+/* Form */
+.register-form-container {
+  padding: 2.5rem;
+}
+
+.register-form-container h3 {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.form-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.form-label svg {
+  color: var(--ms-blue);
+}
+
+.form-input.error,
+.form-select.error {
+  border-color: #ef4444;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+/* Interests Grid */
+.interests-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+}
+
+.interest-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  cursor: pointer;
+  padding: 0.75rem;
+  background: var(--glass-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+}
+
+.interest-checkbox:hover {
+  border-color: var(--ms-blue);
+}
+
+.interest-checkbox input {
+  display: none;
+}
+
+.checkbox-custom {
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--border-color);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-fast);
+}
+
+.interest-checkbox input:checked + .checkbox-custom {
+  background: var(--ms-blue);
+  border-color: var(--ms-blue);
+}
+
+.interest-checkbox input:checked + .checkbox-custom::after {
+  content: '✓';
+  color: white;
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+.checkbox-label {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.interest-checkbox input:checked ~ .checkbox-label {
+  color: var(--text-primary);
+}
+
+.submit-btn {
+  width: 100%;
+  margin-top: 1rem;
+  padding: 1rem;
+}
+
+.submit-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* Success */
+.success-section {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+}
+
+.success-card {
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 3rem;
+}
+
+.success-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--ms-green);
+  border-radius: 50%;
+  color: white;
+  font-size: 2.5rem;
+}
+
+.success-card h2 {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+}
+
+.success-card p {
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+  line-height: 1.7;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .register-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .register-info {
+    order: 2;
+  }
+
+  .register-form-container {
+    order: 1;
+  }
+}
+
+@media (max-width: 640px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .interests-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .register-form-container {
+    padding: 1.5rem;
+  }
+}
