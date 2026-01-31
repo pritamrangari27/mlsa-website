@@ -229,9 +229,6 @@ This project is licensed under the MIT License.
 
 Built by Pritam Rangari & Teams.
 
----
-
-**Microsoft Learn Student Ambassadors** - Empowering students through technology
-=======
+----------------------------------------------
 # mlsa-website
 https://mlsa-ioit.vercel.app/
