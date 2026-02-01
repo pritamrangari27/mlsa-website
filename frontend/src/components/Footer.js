@@ -70,7 +70,7 @@ const Footer = () => {
             <div className="footer-contact">
               <div className="contact-item">
                 <HiLocationMarker />
-                <span>AISSMS IOIT, Kennedy Road, Pune - 411001</span>
+                <span>AISSMS IOIT, Kennedy Road, Pune - 411001.</span>
               </div>
               <div className="contact-item">
                 <HiMail />
