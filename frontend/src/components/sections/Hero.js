@@ -88,12 +88,12 @@ const Hero = () => {
             </div>
             <div className="stat-divider" />
             <div className="stat-mini">
-              <span className="stat-number">45+</span>
+              <span className="stat-number">15+</span>
               <span className="stat-label">Events</span>
             </div>
             <div className="stat-divider" />
             <div className="stat-mini">
-              <span className="stat-number">32+</span>
+              <span className="stat-number">10+</span>
               <span className="stat-label">Workshops</span>
             </div>
           </motion.div>
