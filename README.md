@@ -1,9 +1,8 @@
-<<<<<<< HEAD
+
 # MLSA AISSMS IOIT Website
 
 A professional, hackathon-quality website for the Microsoft Learn Student Ambassador Club at AISSMS IOIT, Pune.
 
-![MLSA Logo](https://studentambassadors.microsoft.com/assets/studentambassadors-logo.png)
 
 ## 🚀 Features
 
