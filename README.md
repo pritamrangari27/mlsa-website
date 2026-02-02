@@ -1,4 +1,3 @@
-
 # MLSA AISSMS IOIT Website
 
 A professional, hackathon-quality website for the Microsoft Learn Student Ambassador Club at AISSMS IOIT, Pune.
@@ -226,7 +225,7 @@ This project is licensed under the MIT License.
 
 ## 👥 Team
 
-Built by Pritam Rangari & Teams.
+Built by Pritam Rangari.
 
 ----------------------------------------------
 # mlsa-website
