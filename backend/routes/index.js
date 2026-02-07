@@ -409,22 +409,34 @@ router.get('/stats', (req, res) => {
 router.post('/register', [
   body('fullName').trim().isLength({ min: 2 }).withMessage('Name must be at least 2 characters'),
   body('email').isEmail().normalizeEmail().withMessage('Invalid email address'),
-  body('phone').isMobilePhone().withMessage('Invalid phone number'),
+  body('phone').trim().isLength({ min: 10, max: 15 }).withMessage('Phone number must be 10-15 digits'),
   body('department').notEmpty().withMessage('Department is required'),
   body('year').isIn(['1', '2', '3', '4']).withMessage('Invalid year'),
-  body('interests').isArray({ min: 1 }).withMessage('Select at least one interest')
+  body('interests').custom((value) => {
+    // Handle both array and single value
+    if (Array.isArray(value) && value.length > 0) return true;
+    if (typeof value === 'string' && value.length > 0) return true;
+    throw new Error('Select at least one interest');
+  })
 ], (req, res) => {
   const errors = validationResult(req);
   if (!errors.isEmpty()) {
-    return res.status(400).json({ success: false, errors: errors.array() });
+    const errorMessages = errors.array().map(err => err.msg).join(', ');
+    return res.status(400).json({ success: false, message: errorMessages, errors: errors.array() });
   }
+
+  // Ensure interests is always an array
+  const interests = Array.isArray(req.body.interests) ? req.body.interests : [req.body.interests];
 
   // In production, save to database
   const registration = {
     id: Date.now(),
     ...req.body,
+    interests,
     registeredAt: new Date().toISOString()
   };
+
+  console.log('✅ New registration:', registration);
 
   res.status(201).json({
     success: true,

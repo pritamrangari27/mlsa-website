@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useForm } from 'react-hook-form';
-import { HiUser, HiMail, HiPhone, HiAcademicCap, HiSparkles, HiCheck } from 'react-icons/hi';
+import { HiUser, HiMail, HiPhone, HiAcademicCap, HiSparkles, HiCheck, HiExternalLink } from 'react-icons/hi';
+import { FaWhatsapp } from 'react-icons/fa';
 import { submitRegistration } from '../services/api';
 import toast from 'react-hot-toast';
 import './Register.css';
@@ -73,8 +74,48 @@ const Register = () => {
                 Welcome to MLSA AISSMS IOIT! You'll receive a confirmation email shortly 
                 with details about upcoming events and how to get started.
               </p>
+              
+              {/* WhatsApp Group Section */}
+              <motion.div 
+                className="whatsapp-section"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.3, duration: 0.5 }}
+              >
+                <div className="whatsapp-header">
+                  <FaWhatsapp className="whatsapp-icon" />
+                  <h3>Join Our WhatsApp Group</h3>
+                </div>
+                <p className="whatsapp-subtitle">
+                  Connect with fellow MLSA members and stay updated!
+                </p>
+                
+                <div className="qr-container">
+                  <img 
+                    src="/whatsapp-qr.png" 
+                    alt="MLSAC Members WhatsApp Group QR Code"
+                    className="qr-code"
+                  />
+                </div>
+                
+                <p className="qr-instruction">
+                  Scan this QR code using WhatsApp camera to join
+                </p>
+                
+                <a 
+                  href="https://chat.whatsapp.com/CLkdWdFbdjd6KYYyEJc9Y1"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-whatsapp"
+                >
+                  <FaWhatsapp />
+                  Join WhatsApp Group
+                  <HiExternalLink />
+                </a>
+              </motion.div>
+              
               <button 
-                className="btn btn-primary"
+                className="btn btn-secondary register-another-btn"
                 onClick={() => setIsSuccess(false)}
               >
                 Register Another Member
