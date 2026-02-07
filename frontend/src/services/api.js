@@ -25,7 +25,10 @@ api.interceptors.request.use(
 api.interceptors.response.use(
   (response) => response.data,
   (error) => {
-    const message = error.response?.data?.message || 'Something went wrong';
+    const message = error.response?.data?.message || 
+                    error.response?.data?.errors?.[0]?.msg ||
+                    error.message ||
+                    'Something went wrong';
     return Promise.reject(new Error(message));
   }
 );

@@ -13,13 +13,15 @@ import {
   HiPhotograph,
   HiBookOpen,
   HiClipboardList,
-  HiMail
+  HiMail,
+  HiAcademicCap
 } from 'react-icons/hi';
 import './Navbar.css';
 
 const navLinks = [
   { path: '/', label: 'Home', icon: HiHome },
   { path: '/events', label: 'Events', icon: HiCalendar },
+  { path: '/activity', label: 'Activity', icon: HiAcademicCap },
   { path: '/team', label: 'Team', icon: HiUserGroup },
   { path: '/gallery', label: 'Gallery', icon: HiPhotograph },
   { path: '/resources', label: 'Resources', icon: HiBookOpen },
