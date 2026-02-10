@@ -191,11 +191,12 @@
   backdrop-filter: blur(20px);
   border: 1px solid var(--glass-border);
   border-radius: var(--radius-xl);
-  padding: 3rem;
+  padding: 2.5rem 3rem 3rem;
   text-align: center;
   box-shadow: var(--shadow-lg);
   transform: perspective(1000px) rotateY(-5deg) rotateX(5deg);
   transition: transform var(--transition-normal);
+  min-height: 380px;
 }
 
 .hero-3d-card:hover {
@@ -203,9 +204,45 @@
 }
 
 .card-content .microsoft-logo {
-  width: 100px;
-  height: 100px;
+  width: 200px;
+  height: 200px;
   margin: 0 auto 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  border-radius: 16px;
+  padding: 15px;
+  position: relative;
+  box-shadow: 
+    0 0 20px rgba(255, 255, 255, 0.3),
+    0 0 40px rgba(0, 120, 212, 0.2),
+    inset 0 0 20px rgba(255, 255, 255, 0.1);
+  border: 2px solid transparent;
+  background-image: linear-gradient(white, white), 
+                    linear-gradient(135deg, #0078d4, #00a4ef, #7fba00, #ffb900, #f25022);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  animation: shimmer 3s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0%, 100% {
+    box-shadow: 
+      0 0 20px rgba(255, 255, 255, 0.3),
+      0 0 40px rgba(0, 120, 212, 0.2);
+  }
+  50% {
+    box-shadow: 
+      0 0 30px rgba(255, 255, 255, 0.5),
+      0 0 60px rgba(0, 120, 212, 0.4);
+  }
+}
+
+.card-content .microsoft-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .card-content h3 {

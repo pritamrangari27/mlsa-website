@@ -233,8 +233,97 @@
 
 .success-card p {
   color: var(--text-secondary);
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   line-height: 1.7;
+}
+
+/* WhatsApp Section */
+.whatsapp-section {
+  background: linear-gradient(135deg, rgba(37, 211, 102, 0.1) 0%, rgba(37, 211, 102, 0.05) 100%);
+  border: 1px solid rgba(37, 211, 102, 0.3);
+  border-radius: 16px;
+  padding: 2rem;
+  margin: 1.5rem 0;
+  text-align: center;
+}
+
+.whatsapp-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.whatsapp-icon {
+  font-size: 2rem;
+  color: #25D366;
+}
+
+.whatsapp-header h3 {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.whatsapp-subtitle {
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem !important;
+  font-size: 0.95rem;
+}
+
+.qr-container {
+  background: white;
+  border-radius: 16px;
+  padding: 1.5rem;
+  display: inline-block;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.qr-code {
+  width: 280px;
+  height: 280px;
+  object-fit: contain;
+  display: block;
+}
+
+.qr-instruction {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem !important;
+}
+
+.btn-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #25D366;
+  color: white;
+  padding: 0.875rem 1.75rem;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: all var(--transition-fast);
+  border: none;
+  cursor: pointer;
+}
+
+.btn-whatsapp:hover {
+  background: #128C7E;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(37, 211, 102, 0.3);
+}
+
+.btn-whatsapp svg {
+  font-size: 1.25rem;
+}
+
+.register-another-btn {
+  margin-top: 1rem;
 }
 
 /* Responsive */
@@ -264,5 +353,14 @@
 
   .register-form-container {
     padding: 1.5rem;
+  }
+  
+  .whatsapp-section {
+    padding: 1.5rem;
+  }
+  
+  .qr-code {
+    width: 180px;
+    height: 180px;
   }
 }

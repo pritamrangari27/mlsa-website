@@ -109,12 +109,7 @@ const Hero = () => {
             <div className="hero-3d-card">
               <div className="card-content">
                 <div className="microsoft-logo">
-                  <svg viewBox="0 0 100 100" fill="none">
-                    <rect x="5" y="5" width="40" height="40" fill="#f25022"/>
-                    <rect x="55" y="5" width="40" height="40" fill="#7fba00"/>
-                    <rect x="5" y="55" width="40" height="40" fill="#00a4ef"/>
-                    <rect x="55" y="55" width="40" height="40" fill="#ffb900"/>
-                  </svg>
+                  <img src="/mlsa-badge.png" alt="MLSA AISSMS IOIT Badge" />
                 </div>
                 <h3>Learn. Connect. Grow.</h3>
                 <p>Your journey starts here</p>
