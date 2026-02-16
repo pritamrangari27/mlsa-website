@@ -209,6 +209,54 @@ const learnModules = [
     link: 'https://learn.microsoft.com/en-us/training/paths/beginner-python/',
     badge: 'Python',
     image: 'https://learn.microsoft.com/en-us/training/achievements/beginner-python.svg'
+  },
+  {
+    id: 17,
+    title: 'Azure Solutions Architect',
+    description: 'Design and implement solutions on Azure. Learn architecture patterns, high availability, and disaster recovery strategies.',
+    category: 'cloud',
+    level: 'Advanced',
+    duration: '30 hours',
+    modules: 22,
+    link: 'https://learn.microsoft.com/en-us/training/paths/microsoft-azure-architect-design-prerequisites/',
+    badge: 'AZ-305',
+    image: 'https://learn.microsoft.com/en-us/training/achievements/microsoft-azure-architect-design-prerequisites.svg'
+  },
+  {
+    id: 18,
+    title: 'Microsoft Copilot Fundamentals',
+    description: 'Explore Microsoft Copilot capabilities across Microsoft 365, GitHub, and Azure. Learn responsible AI integration.',
+    category: 'ai',
+    level: 'Beginner',
+    duration: '4 hours',
+    modules: 5,
+    link: 'https://learn.microsoft.com/en-us/training/paths/copilot-foundations/',
+    badge: 'Copilot',
+    image: 'https://learn.microsoft.com/en-us/training/achievements/copilot-foundations.svg'
+  },
+  {
+    id: 19,
+    title: 'TypeScript Fundamentals',
+    description: 'Build type-safe JavaScript applications with TypeScript. Learn types, interfaces, generics, and advanced patterns.',
+    category: 'development',
+    level: 'Intermediate',
+    duration: '8 hours',
+    modules: 9,
+    link: 'https://learn.microsoft.com/en-us/training/paths/build-javascript-applications-typescript/',
+    badge: 'TypeScript',
+    image: 'https://learn.microsoft.com/en-us/training/achievements/build-javascript-applications-typescript.svg'
+  },
+  {
+    id: 20,
+    title: 'Azure Networking',
+    description: 'Master Azure networking concepts including virtual networks, load balancing, VPN gateways, and network security.',
+    category: 'cloud',
+    level: 'Intermediate',
+    duration: '14 hours',
+    modules: 11,
+    link: 'https://learn.microsoft.com/en-us/training/paths/az-104-manage-virtual-networks/',
+    badge: 'Networking',
+    image: 'https://learn.microsoft.com/en-us/training/achievements/az-104-manage-virtual-networks.svg'
   }
 ];
 

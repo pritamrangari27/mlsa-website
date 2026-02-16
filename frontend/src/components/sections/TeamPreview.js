@@ -1,16 +1,38 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { HiArrowRight } from 'react-icons/hi';
-import { fetchTeam } from '../../services/api';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 import './TeamPreview.css';
 
-const TeamCard = ({ member, index }) => {
-  const [isFlipped, setIsFlipped] = useState(false);
+// Featured team members for homepage preview
+const featuredTeam = [
+  {
+    id: 1,
+    name: 'Omkar Avasare',
+    role: 'Club Advisor',
+    image: '/team/Omkar Avasare.jpg',
+    bio: 'Guiding and mentoring students in their tech journey with Microsoft technologies.'
+  },
+  {
+    id: 2,
+    name: 'Prathmesh Dawkar',
+    role: 'Club Advisor',
+    image: '/team/Prathmesh Dawkar.jpg',
+    bio: 'Supporting the community with technical expertise and leadership guidance.'
+  },
+  {
+    id: 3,
+    name: 'Niraj Shevade',
+    role: 'President',
+    image: '/team/Niraj-Shevade.jpg',
+    bio: 'Leading the MLSA community and driving innovation and learning initiatives.'
+  }
+];
 
+const TeamCard = ({ member, index }) => {
   return (
     <motion.div
       className="team-card-wrapper"
@@ -19,13 +41,8 @@ const TeamCard = ({ member, index }) => {
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
     >
-      <div 
-        className={`team-card ${isFlipped ? 'flipped' : ''}`}
-        onMouseEnter={() => setIsFlipped(true)}
-        onMouseLeave={() => setIsFlipped(false)}
-      >
-        {/* Front */}
-        <div className="card-face card-front glass-card">
+      <div className="team-card glass-card">
+        <div className="card-content">
           <div className="member-image">
             <LazyLoadImage
               src={member.image}
@@ -38,9 +55,7 @@ const TeamCard = ({ member, index }) => {
           <h3 className="member-name">{member.name}</h3>
           <p className="member-role">{member.role}</p>
         </div>
-
-        {/* Back */}
-        <div className="card-face card-back glass-card">
+        <div className="member-bio-overlay">
           <p className="member-bio">{member.bio}</p>
         </div>
       </div>
@@ -49,26 +64,10 @@ const TeamCard = ({ member, index }) => {
 };
 
 const TeamPreview = () => {
-  const [team, setTeam] = useState([]);
-  const [loading, setLoading] = useState(true);
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
   });
-
-  useEffect(() => {
-    const loadTeam = async () => {
-      try {
-        const response = await fetchTeam();
-        setTeam(response.data.slice(0, 4));
-      } catch (error) {
-        console.error('Failed to fetch team:', error);
-      } finally {
-        setLoading(false);
-      }
-    };
-    loadTeam();
-  }, []);
 
   return (
     <section className="team-preview section" ref={ref}>
@@ -86,23 +85,11 @@ const TeamPreview = () => {
           </p>
         </motion.div>
 
-        {loading ? (
-          <div className="team-grid">
-            {[1, 2, 3, 4].map((i) => (
-              <div key={i} className="team-card-skeleton glass-card">
-                <div className="skeleton skeleton-avatar" style={{ margin: '0 auto 1rem' }} />
-                <div className="skeleton skeleton-title" style={{ width: '60%', margin: '0 auto 0.5rem' }} />
-                <div className="skeleton skeleton-text" style={{ width: '40%', margin: '0 auto' }} />
-              </div>
-            ))}
-          </div>
-        ) : (
-          <div className="team-grid">
-            {team.map((member, index) => (
-              <TeamCard key={member.id} member={member} index={index} />
-            ))}
-          </div>
-        )}
+        <div className="team-grid">
+          {featuredTeam.map((member, index) => (
+            <TeamCard key={member.id} member={member} index={index} />
+          ))}
+        </div>
 
         <motion.div
           className="team-cta"
