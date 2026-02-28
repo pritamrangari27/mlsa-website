@@ -26,7 +26,7 @@ const learnModules = [
     level: 'Beginner',
     duration: '10 hours',
     modules: 12,
-    link: 'https://learn.microsoft.com/en-us/training/paths/az-900-describe-cloud-concepts/',
+    link: 'https://learn.microsoft.com/en-us/training/paths/az-900-describe-cloud-concepts/?wt.mc_id=studentamb_491184',
     badge: 'AZ-900',
     image: 'https://learn.microsoft.com/en-us/training/achievements/az-900-describe-cloud-concepts.svg'
   },
@@ -38,7 +38,7 @@ const learnModules = [
     level: 'Beginner',
     duration: '6 hours',
     modules: 5,
-    link: 'https://learn.microsoft.com/en-us/training/paths/get-started-with-artificial-intelligence-on-azure/',
+    link: 'https://learn.microsoft.com/en-us/training/paths/get-started-with-artificial-intelligence-on-azure/?wt.mc_id=studentamb_491184',
     badge: 'AI-900',
     image: 'https://learn.microsoft.com/en-us/training/achievements/get-started-with-artificial-intelligence-on-azure.svg'
   },
@@ -50,7 +50,7 @@ const learnModules = [
     level: 'Beginner',
     duration: '8 hours',
     modules: 8,
-    link: 'https://learn.microsoft.com/en-us/training/paths/power-plat-fundamentals/',
+    link: 'https://learn.microsoft.com/en-us/training/paths/power-plat-fundamentals/?wt.mc_id=studentamb_491184',
     badge: 'PL-900',
     image: 'https://learn.microsoft.com/en-us/training/achievements/power-plat-fundamentals.svg'
   },
@@ -62,7 +62,7 @@ const learnModules = [
     level: 'Beginner',
     duration: '7 hours',
     modules: 10,
-    link: 'https://learn.microsoft.com/en-us/training/paths/github-foundations/',
+    link: 'https://learn.microsoft.com/en-us/training/paths/github-foundations/?wt.mc_id=studentamb_491184',
     badge: 'GitHub',
     image: 'https://learn.microsoft.com/en-us/training/achievements/github-foundations.svg'
   },
@@ -74,7 +74,7 @@ const learnModules = [
     level: 'Beginner',
     duration: '8 hours',
     modules: 6,
-    link: 'https://learn.microsoft.com/en-us/training/paths/azure-data-fundamentals-explore-core-data-concepts/',
+    link: 'https://learn.microsoft.com/en-us/training/paths/azure-data-fundamentals-explore-core-data-concepts/?wt.mc_id=studentamb_491184',
     badge: 'DP-900',
     image: 'https://learn.microsoft.com/en-us/training/achievements/azure-data-fundamentals-explore-core-data-concepts.svg'
   },
@@ -86,7 +86,7 @@ const learnModules = [
     level: 'Beginner',
     duration: '5 hours',
     modules: 4,
-    link: 'https://learn.microsoft.com/en-us/training/paths/describe-concepts-of-security-compliance-identity/',
+    link: 'https://learn.microsoft.com/en-us/training/paths/describe-concepts-of-security-compliance-identity/?wt.mc_id=studentamb_491184',
     badge: 'SC-900',
     image: 'https://learn.microsoft.com/en-us/training/achievements/describe-concepts-of-security-compliance-identity.svg'
   },
@@ -98,7 +98,7 @@ const learnModules = [
     level: 'Beginner',
     duration: '6 hours',
     modules: 5,
-    link: 'https://learn.microsoft.com/en-us/training/paths/m365-fundamentals/',
+    link: 'https://learn.microsoft.com/en-us/training/paths/m365-fundamentals/?wt.mc_id=studentamb_491184',
     badge: 'MS-900',
     image: 'https://learn.microsoft.com/en-us/training/achievements/m365-fundamentals.svg'
   },
@@ -110,7 +110,7 @@ const learnModules = [
     level: 'Intermediate',
     duration: '12 hours',
     modules: 15,
-    link: 'https://learn.microsoft.com/en-us/training/paths/build-javascript-applications-nodejs/',
+    link: 'https://learn.microsoft.com/en-us/training/paths/build-javascript-applications-nodejs/?wt.mc_id=studentamb_491184',
     badge: 'JavaScript',
     image: 'https://learn.microsoft.com/en-us/training/achievements/build-javascript-applications-nodejs.svg'
   },
@@ -122,7 +122,7 @@ const learnModules = [
     level: 'Intermediate',
     duration: '20 hours',
     modules: 18,
-    link: 'https://learn.microsoft.com/en-us/training/paths/create-azure-app-service-web-apps/',
+    link: 'https://learn.microsoft.com/en-us/training/paths/create-azure-app-service-web-apps/?wt.mc_id=studentamb_491184',
     badge: 'AZ-204',
     image: 'https://learn.microsoft.com/en-us/training/achievements/create-azure-app-service-web-apps.svg'
   },
@@ -134,7 +134,7 @@ const learnModules = [
     level: 'Intermediate',
     duration: '15 hours',
     modules: 12,
-    link: 'https://learn.microsoft.com/en-us/training/paths/create-machine-learn-models/',
+    link: 'https://learn.microsoft.com/en-us/training/paths/create-machine-learn-models/?wt.mc_id=studentamb_491184',
     badge: 'ML',
     image: 'https://learn.microsoft.com/en-us/training/achievements/create-machine-learn-models.svg'
   },
@@ -146,7 +146,7 @@ const learnModules = [
     level: 'Intermediate',
     duration: '18 hours',
     modules: 14,
-    link: 'https://learn.microsoft.com/en-us/training/paths/evolve-your-devops-practices/',
+    link: 'https://learn.microsoft.com/en-us/training/paths/evolve-your-devops-practices/?wt.mc_id=studentamb_491184',
     badge: 'AZ-400',
     image: 'https://learn.microsoft.com/en-us/training/achievements/evolve-your-devops-practices.svg'
   },
@@ -158,7 +158,7 @@ const learnModules = [
     level: 'Advanced',
     duration: '25 hours',
     modules: 20,
-    link: 'https://learn.microsoft.com/en-us/training/paths/data-engineering-with-databricks/',
+    link: 'https://learn.microsoft.com/en-us/training/paths/data-engineering-with-databricks/?wt.mc_id=studentamb_491184',
     badge: 'DP-203',
     image: 'https://learn.microsoft.com/en-us/training/achievements/data-engineering-with-databricks.svg'
   },
@@ -170,7 +170,7 @@ const learnModules = [
     level: 'Beginner',
     duration: '8 hours',
     modules: 10,
-    link: 'https://learn.microsoft.com/en-us/training/paths/csharp-first-steps/',
+    link: 'https://learn.microsoft.com/en-us/training/paths/csharp-first-steps/?wt.mc_id=studentamb_491184',
     badge: 'C#',
     image: 'https://learn.microsoft.com/en-us/training/achievements/csharp-first-steps.svg'
   },
@@ -182,7 +182,7 @@ const learnModules = [
     level: 'Intermediate',
     duration: '10 hours',
     modules: 8,
-    link: 'https://learn.microsoft.com/en-us/training/paths/develop-ai-solutions-azure-openai/',
+    link: 'https://learn.microsoft.com/en-us/training/paths/develop-ai-solutions-azure-openai/?wt.mc_id=studentamb_491184',
     badge: 'AI-102',
     image: 'https://learn.microsoft.com/en-us/training/achievements/develop-ai-solutions-azure-openai.svg'
   },
@@ -194,7 +194,7 @@ const learnModules = [
     level: 'Intermediate',
     duration: '22 hours',
     modules: 16,
-    link: 'https://learn.microsoft.com/en-us/training/paths/az-104-administrator-prerequisites/',
+    link: 'https://learn.microsoft.com/en-us/training/paths/az-104-administrator-prerequisites/?wt.mc_id=studentamb_491184',
     badge: 'AZ-104',
     image: 'https://learn.microsoft.com/en-us/training/achievements/az-104-administrator-prerequisites.svg'
   },
@@ -206,9 +206,57 @@ const learnModules = [
     level: 'Beginner',
     duration: '10 hours',
     modules: 8,
-    link: 'https://learn.microsoft.com/en-us/training/paths/beginner-python/',
+    link: 'https://learn.microsoft.com/en-us/training/paths/beginner-python/?wt.mc_id=studentamb_491184',
     badge: 'Python',
     image: 'https://learn.microsoft.com/en-us/training/achievements/beginner-python.svg'
+  },
+  {
+    id: 17,
+    title: 'Azure Solutions Architect',
+    description: 'Design and implement solutions on Azure. Learn architecture patterns, high availability, and disaster recovery strategies.',
+    category: 'cloud',
+    level: 'Advanced',
+    duration: '30 hours',
+    modules: 22,
+    link: 'https://learn.microsoft.com/en-us/training/paths/microsoft-azure-architect-design-prerequisites/?wt.mc_id=studentamb_491184',
+    badge: 'AZ-305',
+    image: 'https://learn.microsoft.com/en-us/training/achievements/microsoft-azure-architect-design-prerequisites.svg'
+  },
+  {
+    id: 18,
+    title: 'Microsoft Copilot Fundamentals',
+    description: 'Explore Microsoft Copilot capabilities across Microsoft 365, GitHub, and Azure. Learn responsible AI integration.',
+    category: 'ai',
+    level: 'Beginner',
+    duration: '4 hours',
+    modules: 5,
+    link: 'https://learn.microsoft.com/en-us/training/paths/copilot-foundations/?wt.mc_id=studentamb_491184',
+    badge: 'Copilot',
+    image: 'https://learn.microsoft.com/en-us/training/achievements/copilot-foundations.svg'
+  },
+  {
+    id: 19,
+    title: 'TypeScript Fundamentals',
+    description: 'Build type-safe JavaScript applications with TypeScript. Learn types, interfaces, generics, and advanced patterns.',
+    category: 'development',
+    level: 'Intermediate',
+    duration: '8 hours',
+    modules: 9,
+    link: 'https://learn.microsoft.com/en-us/training/paths/build-javascript-applications-typescript/?wt.mc_id=studentamb_491184',
+    badge: 'TypeScript',
+    image: 'https://learn.microsoft.com/en-us/training/achievements/build-javascript-applications-typescript.svg'
+  },
+  {
+    id: 20,
+    title: 'Azure Networking',
+    description: 'Master Azure networking concepts including virtual networks, load balancing, VPN gateways, and network security.',
+    category: 'cloud',
+    level: 'Intermediate',
+    duration: '14 hours',
+    modules: 11,
+    link: 'https://learn.microsoft.com/en-us/training/paths/az-104-manage-virtual-networks/?wt.mc_id=studentamb_491184',
+    badge: 'Networking',
+    image: 'https://learn.microsoft.com/en-us/training/achievements/az-104-manage-virtual-networks.svg'
   }
 ];
 
