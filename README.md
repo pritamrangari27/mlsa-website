@@ -1,7 +1,4 @@
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/fc4e166f-4b60-43ee-af45-3593eaa7e252" />## Learn More
-
 To learn more about Next.js, take a look at the following resources:
-
 - [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
@@ -21,6 +18,10 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 <br>
 <br>
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/67d5433c-864c-498d-ae6c-6edbff269b45" />
+<br>
+<br>
+<br>
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/fc4e166f-4b60-43ee-af45-3593eaa7e252" />
 <br>
 <br>
 <br>
