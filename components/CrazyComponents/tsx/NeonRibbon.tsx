@@ -4,6 +4,7 @@
 
 'use client';
 
+import Link from 'next/link';
 import React, { useEffect, useRef } from 'react';
 
 // Configuration for the ribbon effect
@@ -226,9 +227,11 @@ export default function Shaders() {
                 </p>
 
                 <div className="mt-12 pointer-events-auto">
+                <Link href="/home">
                     <button className="px-8 py-3 border border-white/20 rounded-full hover:bg-white/10 transition-colors backdrop-blur-sm">
-                        Get Started
+                        Join MLSA
                     </button>
+                </Link>
                 </div>
             </div>
 

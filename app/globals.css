@@ -127,4 +127,9 @@
   html {
     @apply font-sans;
   }
+  body {
+  background-color: #0a0f1e;
+  margin: 0;
+  padding: 0;
+}
 }

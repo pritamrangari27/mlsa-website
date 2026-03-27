@@ -1,10 +1,12 @@
 import NeonRibbon from '@/components/CrazyComponents/tsx/NeonRibbon'
 import React from 'react'
-
-const page = () => {
+const Page = () => {
   return (
+    <div>
+     
     <NeonRibbon />
-  )
+    </div>
+    )
 }
 
-export default page
+export default Page
